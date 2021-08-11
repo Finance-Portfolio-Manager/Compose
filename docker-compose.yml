@@ -6,7 +6,6 @@ services:
       - proxy
     image: dev/finportman-api
     restart: always
-    #network_mode: host
     environment:
       - KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE}
   app:
@@ -14,11 +13,9 @@ services:
       - api
     image: dev/finportman-app
     restart: always
-    #network_mode: host
   proxy:
     image: nginx:alpine
     restart: always
-    #network_mode: host
     ports:
       - 80:8081
     volumes:
