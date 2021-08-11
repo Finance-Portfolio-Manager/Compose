@@ -6,7 +6,7 @@ proxy to route requests to the same global address on port 80 to the API and
 the app.
 
 ## Run on a Server
-### Build the App Locally
+### Build the React App Locally
 You must track your build folder and build locally, unfortunately.
 ### Add Credentials to Jenkins
 The following environment variables need to be added to your Jenkins
