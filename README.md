@@ -4,6 +4,12 @@
 Compose file for running the full stack application. Uses an Nginx reverse
 proxy to route requests to the same global address on port 80 to the API and
 the app.
+<br>
+<br>
+Choose your path:
+* [Diagram](##diagram)
+* [Run on a Server](##run-on-a-server)
+* [Run Locally](##run-locally)
 
 ## Diagram
 [![diagram](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)
