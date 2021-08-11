@@ -33,7 +33,7 @@ export KEYS_ALPHAVANTAGE=<AlphaVantage API Key>
 You must also create your .env file in `porfolio_manager_frontend` with the
 following content:
 ```
-REACT_APP_API_URL=http://localhost:8081/changeme
+REACT_APP_API_URL=http://localhost/changeme
 ```
 ### ./run.sh
 The `run.sh` convenience script builds all of the dependent containers, starts
