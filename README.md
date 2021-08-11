@@ -7,9 +7,9 @@ the app.
 <br>
 <br>
 Choose your path:
-* [Diagram](##diagram)
-* [Run on a Server](##run-on-a-server)
-* [Run Locally](##run-locally)
+* [Diagram](#diagram)
+* [Run on a Server](#run-on-a-server)
+* [Run Locally](#run-locally)
 
 ## Diagram
 [![diagram](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)
