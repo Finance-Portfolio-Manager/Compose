@@ -1,7 +1,9 @@
 # ApexStocks Compose
 <!-- #### CODY ANDERSON, QUINTON LIANG, AARON PARKER -->
 
-Compose file for running the full stack application.
+Compose file for running the full stack application. Uses an Nginx reverse
+proxy to route requests to the same global address on port 80 to the API and
+the app.
 
 ## Run on a Server
 ### Build the App Locally
@@ -34,4 +36,5 @@ following content:
 REACT_APP_API_URL=http://localhost:8081/changeme
 ```
 ### ./run.sh
-The `run.sh` convenience script builds all of the dependent containers
+The `run.sh` convenience script builds all of the dependent containers, starts
+docker compose, and launches the site in a browser.

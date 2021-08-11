@@ -27,4 +27,4 @@ docker-compose -f docker-compose.yml up -d
 docker rmi -f $(docker images -f "dangling=true" -q)
 
 # open in browser
-chromium http://localhost:8081/register
+chromium http://localhost/register
