@@ -5,6 +5,9 @@ Compose file for running the full stack application. Uses an Nginx reverse
 proxy to route requests to the same global address on port 80 to the API and
 the app.
 
+## Diagram
+[![diagram](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)](https://github.com/Finance-Portfolio-Manager/Compose/raw/master/diagram.png)
+
 ## Run on a Server
 ### Build the React App Locally
 You must track your build folder and build locally, unfortunately (EC2 not
