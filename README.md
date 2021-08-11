@@ -11,8 +11,8 @@ the app.
 ## Run on a Server
 ### Build the React App Locally
 You must track your build folder and build locally, unfortunately (EC2 not
-powerful enough). Create a `.env` file with `REACT_APP_API_URL=<site
-address>/services`.
+powerful enough). Create a `.env` file with
+`REACT_APP_API_URL=http://apexstocks.xyz/services`.
 ### Add Credentials to Jenkins
 The following environment variables need to be added to your Jenkins
 credentials as "secret text."
