@@ -9,7 +9,7 @@ the app.
 ### Build the React App Locally
 You must track your build folder and build locally, unfortunately (EC2 not
 powerful enough). Create a `.env` file with `REACT_APP_API_URL=<site
-address>/changeme`.
+address>/services`.
 ### Add Credentials to Jenkins
 The following environment variables need to be added to your Jenkins
 credentials as "secret text."
@@ -35,7 +35,7 @@ export KEYS_ALPHAVANTAGE=<AlphaVantage API Key>
 You must also create your .env file in `porfolio_manager_frontend` with the
 following content:
 ```
-REACT_APP_API_URL=http://localhost/changeme
+REACT_APP_API_URL=http://localhost/services
 ```
 ### ./run.sh
 The `run.sh` convenience script builds all of the dependent containers, starts
