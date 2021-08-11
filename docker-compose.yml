@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  api:
+    depends_on:
+      - proxy
+    image: dev/finportman-api
+    restart: always
+    network_mode: host
+    environment:
+      - KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE}
+  app:
+    depends_on:
+      - api
+    image: dev/finportman-app
+    restart: always
+    network_mode: host
+  proxy:
+    image: nginx:alpine
+    restart: always
+    network_mode: host
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
