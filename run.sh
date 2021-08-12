@@ -27,4 +27,6 @@ docker-compose -f docker-compose.yml up -d
 docker rmi -f $(docker images -f "dangling=true" -q)
 
 # open in browser
-chromium http://localhost/register
+sleep 7
+chromium http://localhost/chart
+docker exec -it compose_api_1 sh -c 'tail -f /spring.log'
