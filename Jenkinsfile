@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        PATH = "$PATH:/usr/local/bin"
         KEYS_ALPHAVANTAGE = credentials('KEYS_ALPHAVANTAGE')
     }
 
