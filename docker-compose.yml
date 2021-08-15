@@ -5,18 +5,18 @@ services:
     depends_on:
       - proxy
     image: dev/finportman-api
-    restart: always
+    # restart: always
     environment:
       - KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE}
   app:
     depends_on:
       - api
     image: dev/finportman-app
-    restart: always
+    # restart: always
   proxy:
     image: nginx:alpine
-    restart: always
+    # restart: always
     ports:
-      - 80:8081
+      - ${PORT}:80
     volumes:
       - ./conf.d:/etc/nginx/conf.d

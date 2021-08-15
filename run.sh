@@ -1,12 +1,14 @@
 #!/bin/bash
 
+# default port
+export PORT=${PORT:-80}
+
 # source variables
 . ./.env
 
 # shutdown
-docker-compose down 2> /dev/null
-docker stop finportman-app 2> /dev/null
-docker stop finportman-api 2> /dev/null
+docker-compose kill
+docker rm $(docker ps -a -f status=exited -q)
 
 # build api
 pushd ../API
@@ -28,5 +30,5 @@ docker rmi -f $(docker images -f "dangling=true" -q)
 
 # open in browser
 sleep 7
-chromium http://localhost/chart
+chromium http://localhost:${PORT}/register
 docker exec -it compose_api_1 sh -c 'tail -f /spring.log'
