@@ -2,8 +2,6 @@ version: "3.9"
 
 services:
   api:
-    depends_on:
-      - proxy
     image: dev/finportman-api
     # restart: always
     environment:
@@ -14,6 +12,8 @@ services:
     image: dev/finportman-app
     # restart: always
   proxy:
+    depends_on:
+      - app
     image: nginx:alpine
     # restart: always
     ports:
