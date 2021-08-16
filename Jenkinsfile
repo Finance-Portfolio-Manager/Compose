@@ -4,17 +4,19 @@ pipeline {
     environment {
         PATH = "$PATH:/usr/local/bin"
         KEYS_ALPHAVANTAGE = credentials('KEYS_ALPHAVANTAGE')
+        NEWS_API_KEY = credentials('NEWS_API_KEY')
     }
 
     stages {
         stage('Compose down') {
             steps {
-                sh 'docker-compose down'
+                sh 'PORT=80 docker-compose kill || true'
+                sh 'docker rm $(docker ps -a -f status=exited -q)'
             }
         }
         stage('Compose up') {
             steps {
-                sh 'KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE} docker-compose up -d'
+                sh 'PORT=80 KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE} NEWS_API_KEY=${NEWS_API_KEY} docker-compose up -d'
             }
         }
     }
