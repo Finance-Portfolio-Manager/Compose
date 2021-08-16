@@ -5,6 +5,9 @@ services:
     image: dev/finportman-api
     # restart: always
     environment:
+      - DB_URL=${DB_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
       - KEYS_ALPHAVANTAGE=${KEYS_ALPHAVANTAGE}
       - NEWS_API_KEY=${NEWS_API_KEY}
   app:
