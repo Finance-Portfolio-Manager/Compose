@@ -11,7 +11,7 @@ pipeline {
         stage('Compose down') {
             steps {
                 sh 'PORT=80 docker-compose kill || true'
-                sh 'docker rm $(docker ps -a -f status=exited -q)'
+                sh 'docker rm $(docker ps -a -f status=exited -q) || true'
             }
         }
         stage('Compose up') {
