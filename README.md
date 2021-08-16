@@ -23,10 +23,12 @@ powerful enough). Create a `.env` file with
 The following environment variables need to be added to your Jenkins
 credentials as "secret text."
 * KEYS_ALPHAVANTAGE
-### Add API and App Pipelines
+* NEWS_API_KEY
+* DB_URL
+* DB_USER
+* DB_PASS
+### Add Pipelines
 You must create the API and app pipelines before creating the Compose pipeline.
-### Add Compose Pipeline
-You must create the Compose pipeline with the item name "ApexStocks-Compose."
 ## Run Locally
 ### Directory Structure
 Have your repositories in the same directory as shown:
@@ -39,12 +41,12 @@ Have your repositories in the same directory as shown:
 ### .env Files
 You must create a .env file in `Compose` with the following content:
 ```
+export DB_URL=<database address>
+export DB_USER=<database username>
+export DB_PASS=<database password>
 export KEYS_ALPHAVANTAGE=<AlphaVantage API Key>
-```
-You must also create your .env file in `porfolio_manager_frontend` with the
-following content:
-```
-REACT_APP_API_URL=http://localhost/services
+export NEWS_API_KEY=<News API Key>
+export REACT_APP_API_URL=http://localhost/services
 ```
 ### ./run.sh
 The `run.sh` convenience script builds all of the dependent containers, starts
