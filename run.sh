@@ -30,5 +30,5 @@ docker rmi -f $(docker images -f "dangling=true" -q)
 
 # open in browser
 sleep 7
-chromium http://localhost:${PORT}/register
+# chromium http://localhost:${PORT}/register
 docker exec -it compose_api_1 sh -c 'tail -f /spring.log'
